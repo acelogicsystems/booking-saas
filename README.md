@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BookEase 📅
+
+A SaaS booking system built for Kenyan small businesses — salons, barbershops, and service businesses. Businesses get their own booking page to share on WhatsApp and Instagram.
+
+**Live Demo:** https://your-app.vercel.app
+
+---
+
+## What it does
+
+- Business owners sign up and get a unique booking link
+- Customers use the link to book appointments 24/7
+- Business owners manage bookings from a dashboard
+- WhatsApp sharing built in throughout
+
+## Tech Stack
+
+- **Frontend & Backend** — Next.js 16 (App Router)
+- **Database** — MongoDB Atlas + Mongoose
+- **Auth** — JWT + bcryptjs
+- **Styling** — Tailwind CSS + shadcn/ui
+- **Deployment** — Vercel
+
+## Pages
+
+| Page | Route | Description |
+|------|-------|-------------|
+| Landing | `/` | Marketing page |
+| Signup | `/signup` | Create business account |
+| Login | `/login` | Sign in |
+| Dashboard | `/dashboard` | Business overview |
+| Bookings | `/dashboard/bookings` | Manage all bookings |
+| Customers | `/dashboard/customers` | Customer profiles |
+| Setup | `/dashboard/setup` | Configure services & hours |
+| Public Booking | `/book/[businessId]` | Customer-facing booking page |
+| Confirmation | `/booking-confirmation/[id]` | Post-booking confirmation |
 
 ## Getting Started
 
-First, run the development server:
-
+### 1. Clone the repo
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/YOUR_USERNAME/booking-saas.git
+cd booking-saas
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3. Set up environment variables
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Fill in your values in `.env.local`
+:MONGODB_URI=mongodb+svr://....
+JWT-SECRET=your_secret-key
+### 4. Run locally
+```bash
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000)
 
-To learn more about Next.js, take a look at the following resources:
+## Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Variable | Description |
+|----------|-------------|
+| `MONGODB_URI` | MongoDB Atlas connection string |
+| `JWT_SECRET` | Secret key for JWT tokens |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+Deployed on Vercel. Add the environment variables above in your Vercel project settings before deploying.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Pricing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+KES 500/month per business after 14-day free trial.
+
+---
+
+Built with ❤️ in Kenya 🇰🇪

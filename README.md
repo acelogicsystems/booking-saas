@@ -2,7 +2,7 @@
 
 A SaaS booking system built for Kenyan small businesses — salons, barbershops, and service businesses. Businesses get their own booking page to share on WhatsApp and Instagram.
 
-**Live Demo:** https://your-app.vercel.app
+**Live Demo:** https://booking-saas-2la7.vercel.app
 
 ---
 

@@ -40,10 +40,23 @@ const BookingSchema = new mongoose.Schema({
     type: String,
     default: '',
   },
+  subscriptionStatus: {
+    type: String,
+    enum: ['trial', 'active', 'expired', 'cancelled'],
+    default: 'trial',
+  },
+  trialEndsAt: {
+    type: Date,
+  },
+  subscriptionExpiresAt: {
+    type: Date,
+    default: null,
+  },
   createdAt: {
     type: Date,
     default: Date.now,
   },
+
 });
 
 // Index to prevent double booking (unique constraint on businessId + date)

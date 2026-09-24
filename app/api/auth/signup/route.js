@@ -81,3 +81,15 @@ export async function POST(request) {
     );
   }
 }
+// 14-day free trial starting now
+const trialEndsAt = new Date();
+trialEndsAt.setDate(trialEndsAt.getDate() + 14);
+
+const business = await Business.create({
+  userId: user._id,
+  name: businessName,
+  bookingLink: bookingLink,
+  subscriptionStatus: 'trial',
+  trialEndsAt: trialEndsAt,
+  services: [{ name: 'Consultation', price: 0, duration: 30 }],
+});
